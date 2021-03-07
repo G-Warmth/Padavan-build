@@ -81,6 +81,13 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TCPDUMP/d' configs/templates/$TNAME.config      #删除配置项TCPDUMP
         sed -i '/CONFIG_FIRMWARE_INCLUDE_EAP_PEAP/d' configs/templates/$TNAME.config     #删除配置项EAP_PEAP
         sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC/d' configs/templates/$TNAME.config   #删除配置项OPENSSL_EC
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_WYY=d' configs/templates/$TNAME.config          #网易云解锁
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_WYYBIN=d' configs/templates/$TNAME.config       #网易云解锁GO版本执行文件（4M多）注意固件超大小,不集成会自动下载
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPC=d' configs/templates/$TNAME.config         #内网穿透FRPC
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPS=d' configs/templates/$TNAME.config         #内网穿透FRPS
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_CADDY=d' configs/templates/$TNAME.config        #在线文件管理服务
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SMARTDNS=d' configs/templates/$TNAME.config     #smartdns
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SMARTDNSBIN=d' configs/templates/$TNAME.config  #smartdns二进制文件
         ####################################################################
         # 以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件。
         ####################################################################
